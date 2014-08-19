@@ -4,5 +4,12 @@
 
 <p>{{body}}</p>
 
+{{!-- <h3>Comments</h3> --}}
+
+{{!-- {{#each comments}}
+	{{body}}
+{{/each}} --}}
+<p>{{#link-to 'comments.new'}} Create a new comment{{/link-to}}</p>
+
 {{outlet}}
 
