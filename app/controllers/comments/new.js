@@ -3,8 +3,9 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 	actions: {
 		newComment: function() {
-			// console.log(this.get('body'));
+			var self = this;
 			var comment = this.store.createRecord('comment', {
+				post: self.get('mypost'),
 				body: this.get('body')
 			});
 			comment.save();
